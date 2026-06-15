@@ -1,0 +1,14 @@
+{
+  "name": "jdud-media-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static portfolio site for jdud.media built with Tailwind CSS.",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

@@ -3,22 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jdud.media</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: #111;
-      color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    }
-    h1 { font-size: 3rem; letter-spacing: 0.05em; }
-  </style>
+  <title>jdud.media — Photography & Content Creation</title>
+  <meta name="description" content="jdud.media — professional photography and content creation. View the portfolio, browse packages, and book your session.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./dist/output.css">
 </head>
-<body>
-  <h1>jdud.media</h1>
+<body class="bg-ink font-sans text-zinc-100 antialiased">
+
+  <!-- Nav -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-ink/80 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a href="#top" class="font-display text-2xl font-semibold tracking-wide text-white">
+        jdud<span class="text-accent">.</span>media
+      </a>
+      <ul class="hidden items-center gap-8 text-sm font-medium text-muted md:flex">
+        <li><a href="#portfolio" class="transition hover:text-accent">Portfolio</a></li>
+        <li><a href="#packages" class="transition hover:text-accent">Packages</a></li>
+        <li><a href="#about" class="transition hover:text-accent">About</a></li>
+        <li><a href="#availability" class="transition hover:text-accent">Availability</a></li>
+      </ul>
+      <a href="#availability" class="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-ink transition hover:bg-accent-soft">
+        Book a session
+      </a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="relative flex min-h-screen items-center justify-center overflow-hidden">
+    <img src="https://picsum.photos/id/1015/1920/1280" alt="" class="absolute inset-0 h-full w-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/60 to-ink"></div>
+    <div class="relative mx-auto max-w-3xl px-6 text-center">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Photography &amp; Content Creation</p>
+      <h1 class="font-display text-5xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
+        Stories told through a lens
+      </h1>
+      <p class="mx-auto mt-6 max-w-xl text-lg text-zinc-300">
+        We craft striking visuals for brands, events, and people who want to be remembered.
+      </p>
+      <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a href="#portfolio" class="w-full rounded-full bg-accent px-8 py-3 font-semibold text-ink transition hover:bg-accent-soft sm:w-auto">
+          View portfolio
+        </a>
+        <a href="#packages" class="w-full rounded-full border border-white/20 px-8 py-3 font-semibold text-white transition hover:border-accent hover:text-accent sm:w-auto">
+          See packages
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+    <div class="mb-12 text-center">
+      <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Portfolio</p>
+      <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Selected work</h2>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="#" class="group relative overflow-hidden rounded-lg">
+        <img src="https://picsum.photos/id/1018/800/800" alt="Portfolio sample 1" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
+          <span class="font-display text-xl text-white">Landscapes</span>
+        </div>
+      </a>
+      <a href="#" class="group relative overflow-hidden rounded-lg">
+        <img src="https://picsum.photos/id/1027/800/800" alt="Portfolio sample 2" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
+          <span class="font-display text-xl text-white">Portraits</span>
+        </div>
+      </a>
+      <a href="#" class="group relative overflow-hidden rounded-lg">
+        <img src="https://picsum.photos/id/1043/800/800" alt="Portfolio sample 3" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
+          <span class="font-display text-xl text-white">Events</span>
+        </div>
+      </a>
+      <a href="#" class="group relative overflow-hidden rounded-lg">
+        <img src="https://picsum.photos/id/1062/800/800" alt="Portfolio sample 4" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
+          <span class="font-display text-xl text-white">Product</span>
+        </div>
+      </a>
+      <a href="#" class="group relative overflow-hidden rounded-lg">
+        <img src="https://picsum.photos/id/1074/800/800" alt="Portfolio sample 5" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
+          <span class="font-display text-xl text-white">Travel</span>
+        </div>
+      </a>
+      <a href="#" class="group relative overflow-hidden rounded-lg">
+        <img src="https://picsum.photos/id/1080/800/800" alt="Portfolio sample 6" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
+        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
+          <span class="font-display text-xl text-white">Lifestyle</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="packages" class="scroll-mt-20 bg-surface py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Packages &amp; Pricing</p>
+        <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Find the right fit</h2>
+      </div>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <!-- Tier 1 -->
+        <div class="flex flex-col rounded-2xl border border-white/10 bg-surface-2 p-8">
+          <h3 class="font-display text-2xl font-semibold text-white">Essential</h3>
+          <p class="mt-2 text-sm text-muted">Perfect for a quick, focused shoot.</p>
+          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$350</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+            <li>1-hour session</li>
+            <li>1 location</li>
+            <li>20 edited photos</li>
+            <li>Online gallery delivery</li>
+          </ul>
+          <a href="#availability" class="mt-8 rounded-full border border-accent px-6 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
+            Choose Essential
+          </a>
+        </div>
+        <!-- Tier 2 (featured) -->
+        <div class="relative flex flex-col rounded-2xl border-2 border-accent bg-surface-2 p-8 shadow-xl shadow-accent/10">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-4 py-1 text-xs font-semibold uppercase tracking-wide text-ink">Most popular</span>
+          <h3 class="font-display text-2xl font-semibold text-white">Signature</h3>
+          <p class="mt-2 text-sm text-muted">Our most-booked content package.</p>
+          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$750</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+            <li>3-hour session</li>
+            <li>Up to 2 locations</li>
+            <li>60 edited photos</li>
+            <li>5 short-form video clips</li>
+            <li>48-hour turnaround</li>
+          </ul>
+          <a href="#availability" class="mt-8 rounded-full bg-accent px-6 py-3 text-center text-sm font-semibold text-ink transition hover:bg-accent-soft">
+            Choose Signature
+          </a>
+        </div>
+        <!-- Tier 3 -->
+        <div class="flex flex-col rounded-2xl border border-white/10 bg-surface-2 p-8">
+          <h3 class="font-display text-2xl font-semibold text-white">Premier</h3>
+          <p class="mt-2 text-sm text-muted">Full-day production for brands &amp; events.</p>
+          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$1,500</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+            <li>Full-day coverage</li>
+            <li>Unlimited locations</li>
+            <li>150+ edited photos</li>
+            <li>Highlight reel + clips</li>
+            <li>Priority scheduling</li>
+          </ul>
+          <a href="#availability" class="mt-8 rounded-full border border-accent px-6 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
+            Choose Premier
+          </a>
+        </div>
+      </div>
+      <p class="mt-8 text-center text-sm text-muted">Custom quotes available for weddings and ongoing content retainers.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+    <div class="grid items-center gap-12 md:grid-cols-2">
+      <div class="overflow-hidden rounded-2xl">
+        <img src="https://picsum.photos/id/1005/900/1100" alt="Portrait of the photographer" class="aspect-[4/5] w-full object-cover">
+      </div>
+      <div>
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">About</p>
+        <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Behind the lens</h2>
+        <p class="mt-6 text-lg leading-relaxed text-zinc-300">
+          jdud.media is a content creation studio focused on authentic, cinematic imagery.
+          With years of experience across portraits, events, and brand storytelling, we
+          help you capture moments that feel true to who you are.
+        </p>
+        <p class="mt-4 leading-relaxed text-muted">
+          Every project starts with a conversation. We learn your goals, plan the shoot,
+          and deliver a polished gallery you'll be proud to share.
+        </p>
+        <a href="#availability" class="mt-8 inline-block rounded-full bg-accent px-8 py-3 font-semibold text-ink transition hover:bg-accent-soft">
+          Let's work together
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Availability (Calendly inline embed) -->
+  <section id="availability" class="scroll-mt-20 bg-surface py-24">
+    <div class="mx-auto max-w-4xl px-6">
+      <div class="mb-12 text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Availability</p>
+        <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Book your session</h2>
+        <p class="mx-auto mt-4 max-w-xl text-muted">Pick a time that works for you and we'll take it from there.</p>
+      </div>
+      <!-- Calendly inline widget: replace data-url with the client's real Calendly link -->
+      <div class="overflow-hidden rounded-2xl border border-white/10 bg-white">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/your-calendly-username/consultation" style="min-width:320px;height:700px;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 bg-ink py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted sm:flex-row">
+      <p class="font-display text-lg text-white">jdud<span class="text-accent">.</span>media</p>
+      <p>&copy; <span id="year"></span> jdud.media. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Calendly embed script -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

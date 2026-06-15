@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0f0f10;
+  --color-surface: #18181b;
+  --color-surface-2: #232327;
+  --color-muted: #a1a1aa;
+  --color-accent: #c8a25b;
+  --color-accent-soft: #e3c98c;
+
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
