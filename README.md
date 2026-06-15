@@ -28,10 +28,6 @@ npm run watch:css    # rebuild dist/output.css on every change
 
 Then open `index.html` in a browser, or serve the folder:
 
-```bash
-python3 -m http.server 8080   # visit http://localhost:8080
-```
-
 To build the CSS once (minified):
 
 ```bash
