@@ -5,10 +5,12 @@
   "description": "Static portfolio site for jdud.media built with Tailwind CSS.",
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "compress:images": "node scripts/compress-images.js"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.0",
+    "sharp": "^0.33.0",
     "tailwindcss": "^4.1.0"
   }
 }

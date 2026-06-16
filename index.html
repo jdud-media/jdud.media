@@ -21,7 +21,6 @@
       <ul class="hidden items-center gap-8 text-sm font-medium text-muted md:flex">
         <li><a href="#portfolio" class="transition hover:text-accent">Portfolio</a></li>
         <li><a href="#pricing" class="transition hover:text-accent">Pricing</a></li>
-        <li><a href="#book" class="transition hover:text-accent">Book</a></li>
         <li><a href="#contact" class="transition hover:text-accent">Contact</a></li>
         <li><a href="#about" class="transition hover:text-accent">About</a></li>
       </ul>
@@ -41,7 +40,6 @@
       <ul class="space-y-1 px-6 py-4 text-sm font-medium text-muted">
         <li><a href="#portfolio" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Portfolio</a></li>
         <li><a href="#pricing" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Pricing</a></li>
-        <li><a href="#book" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Book</a></li>
         <li><a href="#contact" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Contact</a></li>
         <li><a href="#about" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">About</a></li>
       </ul>
@@ -50,16 +48,13 @@
 
   <!-- Hero -->
   <section id="top" class="relative flex min-h-screen items-center justify-center overflow-hidden">
-    <img src="https://picsum.photos/id/1015/1920/1280" alt="" class="absolute inset-0 h-full w-full object-cover">
+    <img src="./images/brownTheatre_hero.webp" alt="Brown theatre building" class="absolute inset-0 h-full w-full object-cover">
     <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/60 to-ink"></div>
     <div class="relative mx-auto max-w-3xl px-6 text-center">
       <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Creating high quality content that:</p>
       <h1 class="font-display text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
         Attracts Attention<br>Builds Connections<br>Boosts Growth<br>Leaves a Lasting Impact
       </h1>
-      <p class="mx-auto mt-8 max-w-xl text-lg text-zinc-300">
-        We craft striking visuals for brands, events, and people who want to be remembered.
-      </p>
       <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <a href="#portfolio" class="w-full rounded-full bg-accent px-8 py-3 font-semibold text-ink transition hover:bg-accent-soft sm:w-auto">
           View portfolio
@@ -78,42 +73,45 @@
       <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Selected work</h2>
     </div>
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <a href="#" class="group relative overflow-hidden rounded-lg">
-        <img src="https://picsum.photos/id/1018/800/800" alt="Portfolio sample 1" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
-          <span class="font-display text-xl text-white">Landscapes</span>
-        </div>
-      </a>
-      <a href="#" class="group relative overflow-hidden rounded-lg">
-        <img src="https://picsum.photos/id/1027/800/800" alt="Portfolio sample 2" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
-          <span class="font-display text-xl text-white">Portraits</span>
-        </div>
-      </a>
-      <a href="#" class="group relative overflow-hidden rounded-lg">
-        <img src="https://picsum.photos/id/1043/800/800" alt="Portfolio sample 3" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
-          <span class="font-display text-xl text-white">Events</span>
-        </div>
-      </a>
-      <a href="#" class="group relative overflow-hidden rounded-lg">
-        <img src="https://picsum.photos/id/1062/800/800" alt="Portfolio sample 4" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
-          <span class="font-display text-xl text-white">Product</span>
-        </div>
-      </a>
-      <a href="#" class="group relative overflow-hidden rounded-lg">
-        <img src="https://picsum.photos/id/1074/800/800" alt="Portfolio sample 5" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
-          <span class="font-display text-xl text-white">Travel</span>
-        </div>
-      </a>
-      <a href="#" class="group relative overflow-hidden rounded-lg">
-        <img src="https://picsum.photos/id/1080/800/800" alt="Portfolio sample 6" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105">
-        <div class="absolute inset-0 flex items-end bg-gradient-to-t from-ink/80 to-transparent p-5 opacity-0 transition group-hover:opacity-100">
-          <span class="font-display text-xl text-white">Lifestyle</span>
-        </div>
-      </a>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/alley.webp" alt="Alley" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/beagle.webp" alt="Beagle" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/brownTheatre.webp" alt="Brown Theatre" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/construction.webp" alt="Construction" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/corgi.webp" alt="Corgi" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/downTownCross.webp" alt="Downtown Cross" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/fireEscape.webp" alt="Fire Escape" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/fireTruck.webp" alt="Fire Truck" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/mustange.webp" alt="Mustang" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/parkingGarage.webp" alt="Parking Garage" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/shell.webp" alt="Shell" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/stairCase.webp" alt="Staircase" class="aspect-square w-full object-cover">
+      </div>
+      <div class="relative overflow-hidden rounded-lg">
+        <img src="./images/thePalace.webp" alt="The Palace" class="aspect-square w-full object-cover">
+      </div>
     </div>
   </section>
 
@@ -262,31 +260,28 @@
       <div class="mb-12 text-center">
         <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Contact</p>
         <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Get in touch</h2>
-        <p class="mt-4 text-muted">Have a question or a project in mind? Send a message and we'll get back to you.</p>
+        <p class="mt-4 text-muted">Follow us on social media or reach out directly.</p>
       </div>
-      <form class="space-y-5">
-        <div class="grid gap-5 sm:grid-cols-2">
-          <div>
-            <label for="name" class="mb-2 block text-sm font-medium text-zinc-300">Name</label>
-            <input id="name" type="text" placeholder="Your name" class="w-full rounded-xl border border-white/10 bg-surface px-4 py-3 text-sm text-white placeholder-muted outline-none transition focus:border-accent focus:ring-1 focus:ring-accent">
-          </div>
-          <div>
-            <label for="email" class="mb-2 block text-sm font-medium text-zinc-300">Email</label>
-            <input id="email" type="email" placeholder="your@email.com" class="w-full rounded-xl border border-white/10 bg-surface px-4 py-3 text-sm text-white placeholder-muted outline-none transition focus:border-accent focus:ring-1 focus:ring-accent">
-          </div>
-        </div>
-        <div>
-          <label for="subject" class="mb-2 block text-sm font-medium text-zinc-300">Subject</label>
-          <input id="subject" type="text" placeholder="What's this about?" class="w-full rounded-xl border border-white/10 bg-surface px-4 py-3 text-sm text-white placeholder-muted outline-none transition focus:border-accent focus:ring-1 focus:ring-accent">
-        </div>
-        <div>
-          <label for="message" class="mb-2 block text-sm font-medium text-zinc-300">Message</label>
-          <textarea id="message" rows="5" placeholder="Tell us about your project..." class="w-full rounded-xl border border-white/10 bg-surface px-4 py-3 text-sm text-white placeholder-muted outline-none transition focus:border-accent focus:ring-1 focus:ring-accent"></textarea>
-        </div>
-        <button type="submit" class="w-full rounded-full bg-accent py-3 font-semibold text-ink transition hover:bg-accent-soft">
-          Send message
-        </button>
-      </form>
+      <div class="flex flex-col gap-4">
+        <a href="https://instagram.com/jdud.media" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 rounded-full border border-accent px-8 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+          </svg>
+          Instagram @jdud.media
+        </a>
+        <a href="https://linkedin.com/in/josiah-dudley-416b93416" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 rounded-full border border-accent px-8 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.249-.129.597-.129.946v5.441h-3.554s.05-8.807 0-9.726h3.554v1.375c.427-.659 1.191-1.599 2.897-1.599 2.117 0 3.704 1.385 3.704 4.362v5.588zM5.337 8.855c-1.144 0-1.915-.759-1.915-1.71 0-.955.77-1.71 1.952-1.71 1.18 0 1.914.755 1.939 1.71 0 .951-.759 1.71-1.976 1.71zm1.959 11.597H3.394V9.726h3.902v10.726zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+          </svg>
+          LinkedIn Josiah Dudley
+        </a>
+        <a id="email-link" href="#" class="inline-flex items-center justify-center gap-3 rounded-full border border-accent px-8 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          <span id="email-text">Email us</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -295,7 +290,7 @@
     <div class="mx-auto max-w-6xl px-6">
       <div class="grid items-center gap-12 md:grid-cols-2">
         <div class="overflow-hidden rounded-2xl">
-          <img src="https://picsum.photos/id/1005/900/1100" alt="Portrait of the photographer" class="aspect-[4/5] w-full object-cover">
+          <img src="./images/me_about.webp" alt="Portrait of the photographer" class="aspect-[4/5] w-full object-cover">
         </div>
         <div>
           <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">About</p>
@@ -327,31 +322,6 @@
 
   <!-- Calendly embed script -->
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    function toggleMobileMenu() {
-      var menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    }
-
-    function showTab(name) {
-      const tabs = ['businesses', 'creators', 'portraits'];
-      tabs.forEach(function(t) {
-        var panel = document.getElementById('panel-' + t);
-        var tab = document.getElementById('tab-' + t);
-        var active = t === name;
-        panel.classList.toggle('hidden', !active);
-        tab.setAttribute('aria-selected', active ? 'true' : 'false');
-        if (active) {
-          tab.classList.remove('border-white/20', 'text-muted');
-          tab.classList.add('border-accent', 'bg-accent', 'text-ink');
-        } else {
-          tab.classList.remove('border-accent', 'bg-accent', 'text-ink');
-          tab.classList.add('border-white/20', 'text-muted');
-        }
-      });
-    }
-  </script>
+  <script src="./scripts/main.js" defer></script>
 </body>
 </html>
