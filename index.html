@@ -20,9 +20,9 @@
       </a>
       <ul class="hidden items-center gap-8 text-sm font-medium text-muted md:flex">
         <li><a href="#portfolio" class="transition hover:text-accent">Portfolio</a></li>
+        <li><a href="#about" class="transition hover:text-accent">About</a></li>
         <li><a href="#pricing" class="transition hover:text-accent">Pricing</a></li>
         <li><a href="#contact" class="transition hover:text-accent">Contact</a></li>
-        <li><a href="#about" class="transition hover:text-accent">About</a></li>
       </ul>
       <div class="flex items-center gap-3">
         <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden rounded-lg border border-white/10 p-2 text-white transition hover:border-accent hover:text-accent">
@@ -39,9 +39,9 @@
     <div id="mobile-menu" class="hidden border-t border-white/5 bg-ink/95 md:hidden">
       <ul class="space-y-1 px-6 py-4 text-sm font-medium text-muted">
         <li><a href="#portfolio" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Portfolio</a></li>
+        <li><a href="#about" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">About</a></li>
         <li><a href="#pricing" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Pricing</a></li>
         <li><a href="#contact" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Contact</a></li>
-        <li><a href="#about" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">About</a></li>
       </ul>
     </div>
   </header>
@@ -111,6 +111,53 @@
       </div>
       <div class="relative overflow-hidden rounded-lg">
         <img src="./images/thePalace.webp" alt="The Palace" class="aspect-square w-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="scroll-mt-20 bg-surface py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="grid items-center gap-12 md:grid-cols-2">
+        <div class="overflow-hidden rounded-2xl">
+          <img src="./images/me_about.webp" alt="Portrait of the photographer" class="aspect-[4/5] w-full object-cover">
+        </div>
+        <div>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">About</p>
+          <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Behind the lens</h2>
+          <p class="mt-2 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+            Photo &nbsp;•&nbsp; Video &nbsp;•&nbsp; Social Content
+          </p>
+          <p class="mt-6 text-lg leading-relaxed text-zinc-300">
+            Hi! My name is Josiah Dudley and I am a Content Producer based out of the DFW Metroplex.
+            I love sports, photography, family, friends, and Church! Don't be a stranger!
+          </p>
+
+
+          <dl class="mt-8 space-y-4">
+            <div class="grid grid-cols-[5rem_1fr] items-baseline gap-x-4">
+              <dt class="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Vision</dt>
+              <dd class="text-sm leading-relaxed text-zinc-300">Become the go-to content creator for businesses and creators.</dd>
+            </div>
+            <div class="grid grid-cols-[5rem_1fr] items-baseline gap-x-4">
+              <dt class="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Mission</dt>
+              <dd class="text-sm leading-relaxed text-zinc-300">Create content that grows.</dd>
+            </div>
+            <div class="grid grid-cols-[5rem_1fr] items-baseline gap-x-4">
+              <dt class="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Pillars</dt>
+              <dd class="text-sm leading-relaxed text-zinc-300">Storytelling, Growth, Authenticity, Quality</dd>
+            </div>
+          </dl>
+          
+          <p class="mt-6 text-lg leading-relaxed text-zinc-300">
+            Helping businesses and creators turn their story into content worth watching.
+            Content that attracts attention, builds trust, and elevates brands.
+          </p>
+
+          <a href="#book" class="mt-8 inline-block rounded-full bg-accent px-8 py-3 font-semibold text-ink transition hover:bg-accent-soft">
+            Let's work together
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -239,21 +286,6 @@
     </div>
   </section>
 
-  <!-- Book (Calendly inline embed) -->
-  <section id="book" class="scroll-mt-20 bg-surface py-24">
-    <div class="mx-auto max-w-4xl px-6">
-      <div class="mb-12 text-center">
-        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Book</p>
-        <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Book your session</h2>
-        <p class="mx-auto mt-4 max-w-xl text-muted">Pick a time that works for you and we'll take it from there.</p>
-      </div>
-      <!-- Calendly inline widget: replace data-url with the client's real Calendly link -->
-      <div class="overflow-hidden rounded-2xl border border-white/10 bg-white">
-        <div class="calendly-inline-widget" data-url="https://calendly.com/jdud-media/30min" style="min-width:320px;height:700px;"></div>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact -->
   <section id="contact" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
     <div class="mx-auto max-w-xl">
@@ -285,29 +317,17 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="scroll-mt-20 bg-surface py-24">
-    <div class="mx-auto max-w-6xl px-6">
-      <div class="grid items-center gap-12 md:grid-cols-2">
-        <div class="overflow-hidden rounded-2xl">
-          <img src="./images/me_about.webp" alt="Portrait of the photographer" class="aspect-[4/5] w-full object-cover">
-        </div>
-        <div>
-          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">About</p>
-          <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Behind the lens</h2>
-          <p class="mt-6 text-lg leading-relaxed text-zinc-300">
-            jdud.media is a content creation studio focused on authentic, cinematic imagery.
-            With years of experience across portraits, events, and brand storytelling, we
-            help you capture moments that feel true to who you are.
-          </p>
-          <p class="mt-4 leading-relaxed text-muted">
-            Every project starts with a conversation. We learn your goals, plan the shoot,
-            and deliver a polished gallery you'll be proud to share.
-          </p>
-          <a href="#book" class="mt-8 inline-block rounded-full bg-accent px-8 py-3 font-semibold text-ink transition hover:bg-accent-soft">
-            Let's work together
-          </a>
-        </div>
+  <!-- Book (Calendly inline embed) -->
+  <section id="book" class="scroll-mt-20 bg-surface py-24">
+    <div class="mx-auto max-w-4xl px-6">
+      <div class="mb-12 text-center">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Book</p>
+        <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Book your session</h2>
+        <p class="mx-auto mt-4 max-w-xl text-muted">Pick a time that works for you and we'll take it from there.</p>
+      </div>
+      <!-- Calendly inline widget: replace data-url with the client's real Calendly link -->
+      <div class="overflow-hidden rounded-2xl border border-white/10 bg-white">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/jdud-media/30min" style="min-width:320px;height:700px;"></div>
       </div>
     </div>
   </section>
