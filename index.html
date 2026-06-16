@@ -25,10 +25,27 @@
         <li><a href="#contact" class="transition hover:text-accent">Contact</a></li>
         <li><a href="#about" class="transition hover:text-accent">About</a></li>
       </ul>
-      <a href="#book" class="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-ink transition hover:bg-accent-soft">
-        Book a session
-      </a>
+      <div class="flex items-center gap-3">
+        <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden rounded-lg border border-white/10 p-2 text-white transition hover:border-accent hover:text-accent">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <a href="#book" class="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-ink transition hover:bg-accent-soft">
+          Book a session
+        </a>
+      </div>
     </nav>
+    <!-- Mobile menu dropdown -->
+    <div id="mobile-menu" class="hidden border-t border-white/5 bg-ink/95 md:hidden">
+      <ul class="space-y-1 px-6 py-4 text-sm font-medium text-muted">
+        <li><a href="#portfolio" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Portfolio</a></li>
+        <li><a href="#pricing" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Pricing</a></li>
+        <li><a href="#book" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Book</a></li>
+        <li><a href="#contact" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">Contact</a></li>
+        <li><a href="#about" onclick="toggleMobileMenu()" class="block rounded-lg px-4 py-2 transition hover:bg-surface hover:text-accent">About</a></li>
+      </ul>
+    </div>
   </header>
 
   <!-- Hero -->
@@ -36,11 +53,11 @@
     <img src="https://picsum.photos/id/1015/1920/1280" alt="" class="absolute inset-0 h-full w-full object-cover">
     <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/60 to-ink"></div>
     <div class="relative mx-auto max-w-3xl px-6 text-center">
-      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Photography &amp; Content Creation</p>
-      <h1 class="font-display text-5xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">
-        Stories told through a lens
+      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Creating high quality content that:</p>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+        Attracts Attention<br>Builds Connections<br>Boosts Growth<br>Leaves a Lasting Impact
       </h1>
-      <p class="mx-auto mt-6 max-w-xl text-lg text-zinc-300">
+      <p class="mx-auto mt-8 max-w-xl text-lg text-zinc-300">
         We craft striking visuals for brands, events, and people who want to be remembered.
       </p>
       <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -105,59 +122,122 @@
     <div class="mx-auto max-w-6xl px-6">
       <div class="mb-12 text-center">
         <p class="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-accent">Pricing</p>
-        <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Find the right fit</h2>
+        <h2 class="font-display text-4xl font-semibold text-white sm:text-5xl">Packages for businesses,<br>creators, and portraits</h2>
       </div>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-        <!-- Tier 1 -->
+
+      <!-- Category tabs -->
+      <div class="mb-10 flex justify-center gap-2" role="tablist">
+        <button onclick="showTab('businesses')" id="tab-businesses" role="tab" aria-selected="true" aria-controls="panel-businesses"
+          class="pricing-tab rounded-full border border-accent bg-accent px-6 py-2 text-sm font-semibold text-ink transition">
+          Businesses
+        </button>
+        <button onclick="showTab('creators')" id="tab-creators" role="tab" aria-selected="false" aria-controls="panel-creators"
+          class="pricing-tab rounded-full border border-white/20 px-6 py-2 text-sm font-semibold text-muted transition hover:border-accent hover:text-accent">
+          Creators
+        </button>
+        <button onclick="showTab('portraits')" id="tab-portraits" role="tab" aria-selected="false" aria-controls="panel-portraits"
+          class="pricing-tab rounded-full border border-white/20 px-6 py-2 text-sm font-semibold text-muted transition hover:border-accent hover:text-accent">
+          Portraits
+        </button>
+      </div>
+
+      <!-- Businesses -->
+      <div id="panel-businesses" role="tabpanel" aria-labelledby="tab-businesses" class="pricing-panel grid grid-cols-1 gap-8 md:grid-cols-2">
         <div class="flex flex-col rounded-2xl border border-white/10 bg-surface-2 p-8">
-          <h3 class="font-display text-2xl font-semibold text-white">Essential</h3>
-          <p class="mt-2 text-sm text-muted">Perfect for a quick, focused shoot.</p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent">Businesses</p>
+          <h3 class="mt-1 font-display text-2xl font-semibold text-white">Content Essentials</h3>
           <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$350</span></p>
           <ul class="mt-6 space-y-3 text-sm text-zinc-300">
-            <li>1-hour session</li>
-            <li>1 location</li>
-            <li>20 edited photos</li>
-            <li>Online gallery delivery</li>
+            <li>25 Edited photos</li>
+            <li>2 Short-form videos</li>
+            <li>60 Minute Shoot</li>
           </ul>
+          <p class="mt-4 text-sm text-muted">Perfect for Businesses looking to establish a social media presence.</p>
           <a href="#book" class="mt-8 rounded-full border border-accent px-6 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
-            Choose Essential
+            Book Now
           </a>
         </div>
-        <!-- Tier 2 (featured) -->
-        <div class="relative flex flex-col rounded-2xl border-2 border-accent bg-surface-2 p-8 shadow-xl shadow-accent/10">
-          <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-accent px-4 py-1 text-xs font-semibold uppercase tracking-wide text-ink">Most popular</span>
-          <h3 class="font-display text-2xl font-semibold text-white">Signature</h3>
-          <p class="mt-2 text-sm text-muted">Our most-booked content package.</p>
-          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$750</span></p>
-          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
-            <li>3-hour session</li>
-            <li>Up to 2 locations</li>
-            <li>60 edited photos</li>
-            <li>5 short-form video clips</li>
-            <li>48-hour turnaround</li>
-          </ul>
-          <a href="#book" class="mt-8 rounded-full bg-accent px-6 py-3 text-center text-sm font-semibold text-ink transition hover:bg-accent-soft">
-            Choose Signature
-          </a>
-        </div>
-        <!-- Tier 3 -->
         <div class="flex flex-col rounded-2xl border border-white/10 bg-surface-2 p-8">
-          <h3 class="font-display text-2xl font-semibold text-white">Premier</h3>
-          <p class="mt-2 text-sm text-muted">Full-day production for brands &amp; events.</p>
-          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$1,500</span></p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent">Businesses</p>
+          <h3 class="mt-1 font-display text-2xl font-semibold text-white">Content Growth</h3>
+          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$700</span></p>
           <ul class="mt-6 space-y-3 text-sm text-zinc-300">
-            <li>Full-day coverage</li>
-            <li>Unlimited locations</li>
-            <li>150+ edited photos</li>
-            <li>Highlight reel + clips</li>
-            <li>Priority scheduling</li>
+            <li>50 Edited photos</li>
+            <li>5 Short-form videos</li>
+            <li>3 Hour Shoot</li>
           </ul>
+          <p class="mt-4 text-sm text-muted">Perfect for Businesses looking to grow their social media presence.</p>
           <a href="#book" class="mt-8 rounded-full border border-accent px-6 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
-            Choose Premier
+            Book Now
           </a>
         </div>
       </div>
-      <p class="mt-8 text-center text-sm text-muted">Custom quotes available for weddings and ongoing content retainers.</p>
+
+      <!-- Creators -->
+      <div id="panel-creators" role="tabpanel" aria-labelledby="tab-creators" class="pricing-panel hidden grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div class="flex flex-col rounded-2xl border border-white/10 bg-surface-2 p-8">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent">Creators</p>
+          <h3 class="mt-1 font-display text-2xl font-semibold text-white">Content Starter</h3>
+          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$300</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+            <li>20 Edited photos</li>
+            <li>3 Short-form videos</li>
+            <li>60 Minute Shoot</li>
+            <li>Content Planning Call</li>
+          </ul>
+          <p class="mt-4 text-sm text-muted">Perfect for new Creators wanting professional media.</p>
+          <a href="#book" class="mt-8 rounded-full border border-accent px-6 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
+            Book Now
+          </a>
+        </div>
+        <div class="flex flex-col rounded-2xl border border-white/10 bg-surface-2 p-8">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent">Creators</p>
+          <h3 class="mt-1 font-display text-2xl font-semibold text-white">Content Pro</h3>
+          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$800</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+            <li>50 Edited photos</li>
+            <li>8 Short-form videos</li>
+            <li>4 Hour Shoot</li>
+            <li>2 Content Planning Calls</li>
+          </ul>
+          <p class="mt-4 text-sm text-muted">Perfect for established Creators looking for more unique content.</p>
+          <a href="#book" class="mt-8 rounded-full border border-accent px-6 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
+            Book Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Portraits -->
+      <div id="panel-portraits" role="tabpanel" aria-labelledby="tab-portraits" class="pricing-panel hidden grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div class="flex flex-col rounded-2xl border border-white/10 bg-surface-2 p-8">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent">Portraits</p>
+          <h3 class="mt-1 font-display text-2xl font-semibold text-white">Signature Session</h3>
+          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$200</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+            <li>25 Edited photos</li>
+            <li>60 Minute Shoot</li>
+          </ul>
+          <p class="mt-4 text-sm text-muted">Perfect for anyone wanting headshots, family photos, graduation photos, or wedding photos.</p>
+          <a href="#book" class="mt-8 rounded-full border border-accent px-6 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
+            Book Now
+          </a>
+        </div>
+        <div class="flex flex-col rounded-2xl border border-white/10 bg-surface-2 p-8">
+          <p class="text-xs font-semibold uppercase tracking-widest text-accent">Portraits</p>
+          <h3 class="mt-1 font-display text-2xl font-semibold text-white">Premium Session</h3>
+          <p class="mt-6"><span class="font-display text-4xl font-semibold text-white">$450</span></p>
+          <ul class="mt-6 space-y-3 text-sm text-zinc-300">
+            <li>25 Edited photos</li>
+            <li>Multiple Locations and Outfits</li>
+            <li>2.5 Hour Shoot</li>
+          </ul>
+          <p class="mt-4 text-sm text-muted">Perfect for anyone wanting headshots, family photos, graduation photos, or wedding photos.</p>
+          <a href="#book" class="mt-8 rounded-full border border-accent px-6 py-3 text-center text-sm font-semibold text-accent transition hover:bg-accent hover:text-ink">
+            Book Now
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -249,6 +329,29 @@
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMobileMenu() {
+      var menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function showTab(name) {
+      const tabs = ['businesses', 'creators', 'portraits'];
+      tabs.forEach(function(t) {
+        var panel = document.getElementById('panel-' + t);
+        var tab = document.getElementById('tab-' + t);
+        var active = t === name;
+        panel.classList.toggle('hidden', !active);
+        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+        if (active) {
+          tab.classList.remove('border-white/20', 'text-muted');
+          tab.classList.add('border-accent', 'bg-accent', 'text-ink');
+        } else {
+          tab.classList.remove('border-accent', 'bg-accent', 'text-ink');
+          tab.classList.add('border-white/20', 'text-muted');
+        }
+      });
+    }
   </script>
 </body>
 </html>
