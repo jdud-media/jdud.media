@@ -3,4 +3,7 @@ dist/
 _site/
 .DS_Store
 
+# Full-size photo sources; only the compressed output in images/ is deployed.
 images/temp
+images/originals/*
+!images/originals/.gitkeep
