@@ -2,9 +2,11 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const IMAGES_DIR = path.join(__dirname, '..', 'images');
-const OUTPUT_DIR = path.join(IMAGES_DIR, 'web');
-const MIN_SIZE_BYTES = 1024 * 1024; // 1 MB
+// Sources live in images/originals (gitignored); compressed output lands in
+// images/ (committed, and what index.html references). Keeping them in
+// separate directories means a re-run never re-compresses its own output.
+const OUTPUT_DIR = path.join(__dirname, '..', 'images');
+const SOURCE_DIR = path.join(OUTPUT_DIR, 'originals');
 
 const SETTINGS = {
   hero:    { width: 1920, quality: 83, label: 'hero'    },
@@ -18,7 +20,7 @@ const SETTINGS = {
 const HQ_QUALITY = 92;
 const HQ_MIN_WIDTH = 1600;
 
-const SUPPORTED = ['.jpg', '.jpeg', '.png'];
+const SUPPORTED = ['.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.heic'];
 
 function getSettings(basename) {
   const lower = basename.toLowerCase();
@@ -40,25 +42,23 @@ function formatKB(bytes) {
   return (bytes / 1024).toFixed(0) + ' KB';
 }
 
+function formatDelta(inBytes, outBytes) {
+  const pct = ((outBytes - inBytes) / inBytes) * 100;
+  return (pct > 0 ? '+' : '') + pct.toFixed(0) + '%';
+}
+
 async function processImages() {
-  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-  const files = fs.readdirSync(IMAGES_DIR);
+  fs.mkdirSync(SOURCE_DIR, { recursive: true });
+  const files = fs.readdirSync(SOURCE_DIR);
   let processed = 0;
-  let skipped = 0;
+  let grew = 0;
 
   for (const file of files) {
     const ext = path.extname(file).toLowerCase();
     if (!SUPPORTED.includes(ext)) continue;
 
-    const inputPath = path.join(IMAGES_DIR, file);
+    const inputPath = path.join(SOURCE_DIR, file);
     const stat = fs.statSync(inputPath);
-
-    if (stat.size < MIN_SIZE_BYTES) {
-      console.log(`  skip  ${file}  (${formatKB(stat.size)} — under 1 MB)`);
-      skipped++;
-      continue;
-    }
-
     const basename = path.basename(file, ext);
     const outputPath = path.join(OUTPUT_DIR, basename + '.webp');
     const s = getSettings(basename);
@@ -73,14 +73,27 @@ async function processImages() {
       .toFile(outputPath);
 
     const outStat = fs.statSync(outputPath);
+    // An already-optimized source can re-encode larger; flag it rather than
+    // skipping, so every input still produces an output to reference.
+    const bigger = outStat.size > stat.size;
+    if (bigger) grew++;
     console.log(
-      `  ✓  ${file}  →  web/${basename}.webp` +
-      `  (${formatKB(stat.size)} → ${formatKB(outStat.size)},  ${s.width}px wide,  [${s.label}])`
+      `  ${bigger ? '!' : '✓'}  ${file}  →  ${basename}.webp` +
+      `  (${formatKB(stat.size)} → ${formatKB(outStat.size)},  ${formatDelta(stat.size, outStat.size)},` +
+      `  ${s.width}px wide,  [${s.label}])`
     );
     processed++;
   }
 
-  console.log(`\n  Done: ${processed} compressed, ${skipped} skipped.\n`);
+  if (processed === 0) {
+    console.log('  No source images found in images/originals/.');
+    return;
+  }
+
+  console.log(
+    `\n  Done: ${processed} compressed` +
+    `${grew ? `, ${grew} larger than source (marked !)` : ''}.\n`
+  );
 }
 
 console.log('\nCompressing images...\n');
